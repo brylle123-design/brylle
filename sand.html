@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="stlye.css">
+    <title>Journey | TRAVEL</title>
+    <style>
+      /* Style for hiding the content initially */
+      .destination__card__details {
+        display: none;
+        margin-top: 10px;
+      }
+      .destination__card__details.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#" class="logo">Travel</a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#destination">DESTINATION</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#">BOOK TRIP</a></li>
+      </ul>
+    </nav>
+
+    <!-- Destinations Section -->
+    <section class="section__container destination__container" id="destination">
+      <h2 class="section__header"> Destinations</h2>
+      <p class="section__description">
+        Discover the Most Loved Destinations Around
+      </p>
+      <div class="destination__grid">
+        <!-- Sand Dunes -->
+        <div class="destination__card">
+          <img
+            src="Suba-Sand-Dunes-4x4-1.jpg"
+            alt="Sand Dunes"
+            class="toggle-content"
+          />
+          <div class="destination__card__details">
+            <h4>Sand Dunes</h4>
+            <p>Paoay, Ilocos Norte</p>
+            <p>
+              Stroll through the cobblestone streets of this UNESCO heritage
+              site, surrounded by well-preserved Spanish colonial houses and
+              horse-drawn carriages.
+            </p>
+            <div class="destination__rating">
+              <span><i class="ri-star-fill"></i></span>
+              4.7
+            </div>
+          </div>
+        </div>
+
+        <!-- Calle Crisologo -->
+        <div class="destination__card">
+          <img
+            src="4a81823a54bd815fd8c7018fa34dc0e0.jpg"
+            alt="Calle Crisologo"
+            class="toggle-content"
+          />
+          <div class="destination__card__details">
+            <h4>Calle Crisologo</h4>
+            <p>Vigan City</p>
+            <p>
+              Watch a spectacular water and light show at the Vigan Dancing
+              Fountain, a perfect way to end a day of exploration.
+            </p>
+            <div class="destination__rating">
+              <span><i class="ri-star-fill"></i></span>
+              4.8
+            </div>
+          </div>
+        </div>
+
+        <!-- Dancing Fountain -->
+        <div class="destination__card">
+          <img
+            src="dancing-fountain.jpg"
+            alt="Calle Crisologo"
+            class="toggle-content"
+          />
+          <div class="destination__card__details">
+            <h4>Dancing Fountain</h4>
+            <p>Vigan City</p>
+            <p>
+              Marvel at the impressive rows of wind turbines along the scenic
+              coastline, symbolizing sustainable energy efforts in the
+              Philippines.
+            </p>
+            <div class="destination__rating">
+              <span><i class="ri-star-fill"></i></span>
+              4.5
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Bar -->
+    <div class="footer__bar">
+      <p>Copyright © 2024 Travelers. All rights reserved.</p>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+      // Select all the images with the 'toggle-content' class
+      const toggleImages = document.querySelectorAll(".toggle-content");
+
+      toggleImages.forEach((img) => {
+        img.addEventListener("click", () => {
+          const details = img.nextElementSibling; // Select the content div
+          details.classList.toggle("active"); // Toggle the 'active' class
+        });
+      });
+    </script>
+  </body>
+</html>

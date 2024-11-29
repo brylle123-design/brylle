@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="stlye.css">
+    <title>Journey | TRAVEL</title>
+    <style>
+      /* Style for hiding the content initially */
+      .destination__card__details {
+        display: none;
+        margin-top: 10px;
+      }
+      .destination__card__details.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#" class="logo">Travel</a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#destination">DESTINATION</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#">BOOK TRIP</a></li>
+      </ul>
+    </nav>
+
+    <!-- Destinations Section -->
+    <section class="section__container destination__container" id="destination">
+      <h2 class="section__header"> Destinations</h2>
+      <p class="section__description">
+        Discover the Most Loved Destinations Around
+      </p>
+      <div class="destination__grid">
+        <!-- Dancing Fountain -->
+        <div class="destination__card">
+          <img
+            src="dancing-fountain.jpg"
+            alt="Dancing Fountain"
+            class="toggle-content"
+          />
+          <div class="destination__card__details">
+            <h4>Dancing Fountaiin</h4>
+            <p>Vigan City</p>
+            <p>
+              A musical fountain, also known as a fairy fountain, prismatic fountain or dancing fountain, is a type of choreographed fountain that creates aesthetic designs as a form of entertainment.
+            </p>
+            <div class="destination__rating">
+              <span><i class="ri-star-fill"></i></span>
+              4.7
+            </div>
+          </div>
+        </div>
+
+        <!-- Windmills -->
+        <div class="destination__card">
+          <img
+            src="c0c366b3a9a49c97477be9005b72ce4f.png"
+            alt="Windmills"
+            class="toggle-content"
+          />
+          <div class="destination__card__details">
+            <h4>Windmills</h4>
+            <p>Bangui, Ilocos Norte</p>
+            <p>
+              The Bangui Wind Farm is a wind farm in Bangui, Ilocos Norte, Philippines. The wind farm uses 20 units of 70-meter (230 ft) high Vestas V82 1.65 MW wind turbines, arranged in a single row stretching along a 9-kilometer (5.6 mi) shoreline of Bangui Bay, facing the South China Sea.
+            </p>
+            <div class="destination__rating">
+              <span><i class="ri-star-fill"></i></span>
+              4.8
+            </div>
+          </div>
+        </div>
+
+        <!-- Bell Tower Church -->
+        <div class="destination__card">
+          <img
+            src="63d008c1fdb3775a15928d0b_1674578113461_largeb.png"
+            alt="Bell Tower Church"
+            class="toggle-content"
+          />
+          <div class="destination__card__details">
+            <h4>Bell Tower Church</h4>
+            <p>Bantay, Ilocos Sur</p>
+            <p>
+              Bantay Church, located in Bantay, Ilocos Sur, is a Roman Catholic church in the Ilocos town of the same name. Also known as the Saint Augustine Parish Church, it’s one of the oldest surviving churches in the Philippines dating back to 1591. Bantay Church is also famed for its grand design and architecture inspired by Western and European cultures.
+            </p>
+            <div class="destination__rating">
+              <span><i class="ri-star-fill"></i></span>
+              4.5
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Bar -->
+    <div class="footer__bar">
+      <p>Copyright © 2024 Travelers. All rights reserved.</p>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+      // Select all the images with the 'toggle-content' class
+      const toggleImages = document.querySelectorAll(".toggle-content");
+
+      toggleImages.forEach((img) => {
+        img.addEventListener("click", () => {
+          const details = img.nextElementSibling; // Select the content div
+          details.classList.toggle("active"); // Toggle the 'active' class
+        });
+      });
+    </script>
+  </body>
+</html>
